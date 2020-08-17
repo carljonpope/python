@@ -1,0 +1,51 @@
+rounds = 3
+p1score = 0
+p2score = 0
+while rounds > 0:
+
+  player1 = raw_input("Player 1: rock, paper scissors?")
+  p1 = player1.lower()
+  while (p1 != "rock") and (p1 != "paper") and (p1 != "scissors"):
+    player1 = raw_input("Player 1: rock, paper scissors?")
+    p1 = player1.lower()
+  print player1
+
+  player2 = raw_input("Player 2: rock, paper scissors?")
+  p2 = player2.lower()
+  while (p2 != "rock") and (p2 != "paper") and (p2 != "scissors"):
+    player2 = raw_input("Player 2: rock, paper scissors?")
+    p2 = player2.lower()
+  print player2
+  
+
+
+  
+  if p1 == "rock" and p2 == "scissors":
+    print "Player 1 Wins!"
+    p1score += 1
+  elif p1 == "rock" and p2 == "paper":
+    print "Player 2 Wins!"
+    p2score += 1
+  elif p1 == "scissors" and p2 == "rock":
+    print "Player 2 Wins!"
+    p2score += 1
+  elif p1 == "scissors" and p2 == "paper":
+    print "Player 1 Wins!"
+    p1score += 1
+  elif p1 == "paper" and p2 == "rock":
+    print "Player 1 Wins!"
+    p1score += 1
+  elif p1 == "paper" and p2 == "scissors":
+    print "Player 2 Wins!"
+    p2score += 1
+  else:
+    print "Draw!"
+  
+  rounds -= 1
+
+if p1score > p2score:
+  print "Player 1 is overall winner!"
+elif p1score < p2score:
+  print "Player 2 is overall winner!"
+else:
+  print "It's an overall draw"
